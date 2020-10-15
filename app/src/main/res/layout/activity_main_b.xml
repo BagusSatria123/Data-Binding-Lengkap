@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="classB"
+            type="com.bagus.databinding.models.ClassB" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivityB">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tablelayoutid"
+            android:layout_marginTop="10dp">
+
+            <TableRow
+                android:id="@+id/Poltek"
+                android:background="@android:color/holo_blue_light"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:text="Politeknik Mekatronika" />
+            </TableRow>
+
+
+
+            <TableRow
+                android:background="#ECEFF1"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Desain Produk Mekatronika" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Instrumentasi Medis" />
+            </TableRow>
+
+            <TableRow
+                android:background="#ECEFF1"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="D3" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="D3" />
+            </TableRow>
+            <TableRow
+                android:background="#ECEFF1"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pilihan 1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pilihan 2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/pilihan"
+                android:background="#ECEFF1"
+                android:padding="5dp">
+
+                <CheckBox
+                    android:id="@+id/pilihan1DPM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pilihan 1"/>
+                <CheckBox
+                    android:id="@+id/pilihan2IM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilihan 2"
+                    android:layout_weight="1" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/Next2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="505dp"
+            android:text="Lihat Hasil 2"
+            app:layout_constraintTop_toBottomOf="@id/tablelayoutid"></Button>
+
+        <Button
+            android:id="@+id/Lanjut2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="442dp"
+            android:text="Lanjut 2"
+            app:layout_constraintTop_toBottomOf="@id/Next2"></Button>
+
+    </RelativeLayout>
+</layout>

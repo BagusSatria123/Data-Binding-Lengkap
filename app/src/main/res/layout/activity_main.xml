@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="classA"
+            type="com.bagus.databinding.models.ClassA" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/DataCalon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. Data Calon *"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/Nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="264dp"
+                    android:text="1. Nama Lengkap *"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/DataCalon" />
+
+                <EditText
+                    android:id="@+id/Isi_nama_lengkapMaha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:inputType="textPersonName"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Nama Lengkap Mahasiswa"
+                    app:layout_constraintTop_toBottomOf="@id/Nama" />
+
+                <TextView
+                    android:id="@+id/JenisKelamin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="2. Jenis Kelamin *"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_nama_lengkapMaha" />
+
+                <RadioButton
+                    android:id="@+id/JK_perempuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Perempuan"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/JenisKelamin" />
+
+                <RadioButton
+                    android:id="@+id/JK_laki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Laki - Laki"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/JenisKelamin" />
+
+                <TextView
+                    android:id="@+id/Status_Maha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="3. Status Mahasiswa *"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/guideline1" />
+
+                <RadioButton
+                    android:id="@+id/Belum_nikah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Belum Menikah"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Status_Maha" />
+
+                <RadioButton
+                    android:id="@+id/Menikah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Menikah"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Status_Maha" />
+
+                <RadioButton
+                    android:id="@+id/Biagrawan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Biagrawan"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.348"
+                    app:layout_constraintStart_toEndOf="@+id/Menikah"
+                    app:layout_constraintTop_toBottomOf="@id/Status_Maha" />
+
+                <TextView
+                    android:id="@+id/Agama_Maha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="4. Agama Mahasiswa *"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/guideline2" />
+
+                <Spinner
+                    android:id="@+id/spinnerAgama"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:entries="@array/Agama"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintBottom_toTopOf="@id/guideline3"
+                    app:layout_constraintTop_toBottomOf="@id/Agama_Maha"></Spinner>
+
+                <TextView
+                    android:id="@+id/Kewarganegraan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="5. Kewarganegraan *"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/guideline3" />
+
+                <RadioButton
+                    android:id="@+id/Wni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="WNI"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Kewarganegraan" />
+
+                <RadioButton
+                    android:id="@+id/Wna"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="WNA"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Kewarganegraan" />
+
+                <TextView
+                    android:id="@+id/AlamatSurat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="6. Alamat Surat *"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/guideline4" />
+
+                <EditText
+                    android:id="@+id/Isi_AlamatSurat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:inputType="textPersonName"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Alamat Surat Lengkap dgn Kode pos"
+                    app:layout_constraintTop_toBottomOf="@id/AlamatSurat" />
+
+                <TextView
+                    android:id="@+id/AlamatAsal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="7. Alamat Asal *"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_AlamatSurat" />
+
+                <EditText
+                    android:id="@+id/Isi_AlamatAsal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:inputType="textPersonName"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Alamat Asal Lengkap dgn Kode pos"
+                    app:layout_constraintTop_toBottomOf="@id/AlamatAsal" />
+
+                <TextView
+                    android:id="@+id/Kabupaten_kota"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="      Kabupaten / Kota "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_AlamatAsal" />
+
+                <EditText
+                    android:id="@+id/Isi_Kabupaten_kota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:inputType="textPersonName"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Isi Nama Kabupaten / Kota"
+                    app:layout_constraintTop_toBottomOf="@id/Kabupaten_kota" />
+
+                <TextView
+                    android:id="@+id/Provinsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="      Provinsi "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_Kabupaten_kota" />
+
+                <EditText
+                    android:id="@+id/Isi_Provinsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Isi Nama Kabupaten / Kota"
+                    app:layout_constraintTop_toBottomOf="@id/Provinsi" />
+
+                <TextView
+                    android:id="@+id/Nomor_Telp_Rumah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="8. No.Telp Rumah *"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_Provinsi" />
+
+                <EditText
+                    android:id="@+id/Isi_Nomor_Rumah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:inputType="number"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Isi Nomor telepon Rumah"
+                    app:layout_constraintTop_toBottomOf="@id/Nomor_Telp_Rumah" />
+
+                <TextView
+                    android:id="@+id/Nomor_Telp_HP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="     No.Telp HP *"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_Nomor_Rumah" />
+
+                <EditText
+                    android:id="@+id/Isi_Nomor_hp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:inputType="number"
+                    android:hint="Isi Nomor telepon HP"
+                    app:layout_constraintTop_toBottomOf="@id/Nomor_Telp_HP" />
+
+                <TextView
+                    android:id="@+id/Alamat_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="     Alamat Email "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_Nomor_hp" />
+
+                <EditText
+                    android:id="@+id/Isi_Alamat_Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:inputType="textPersonName"
+                    android:hint="Isi Alamat Email"
+                    app:layout_constraintTop_toBottomOf="@id/Alamat_email" />
+
+                <TextView
+                    android:id="@+id/Nama_Ortu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="10. Nama Orang Tua / Wali *"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_Alamat_Email" />
+
+                <EditText
+                    android:id="@+id/Isi_nama_Ortu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:inputType="textPersonName"
+                    android:hint="Isi Nama Orang Tua / Wali"
+                    app:layout_constraintTop_toBottomOf="@id/Nama_Ortu" />
+
+                <TextView
+                    android:id="@+id/Tingkat_Pendidikan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="   Tingkat Pendidikan Ortu *"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_nama_Ortu" />
+                <Spinner
+                    android:id="@+id/spinnerPendidikanOrtu"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:entries="@array/PendidikanOrtu"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/Tingkat_Pendidikan"></Spinner>
+                <TextView
+                    android:id="@+id/UntukMahasiswaTransfer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="11. Untuk Mahasiswa Transfer *"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinnerPendidikanOrtu" />
+                <TextView
+                    android:id="@+id/AsalUniv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="      A. Asal Perguruan Tinggi "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/UntukMahasiswaTransfer" />
+
+                <EditText
+                    android:id="@+id/Isi_Asal_Univ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:inputType="textPersonName"
+                    android:hint="Asal UNIV"
+                    app:layout_constraintTop_toBottomOf="@id/AsalUniv" />
+
+                <TextView
+                    android:id="@+id/AsalProdi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="      B. Asal Program Studi "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_Asal_Univ" />
+
+                <EditText
+                    android:id="@+id/Isi_Asal_Prodi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Asal Prodi"
+                    app:layout_constraintTop_toBottomOf="@id/AsalProdi" />
+                <TextView
+                    android:id="@+id/Status_MahaTrans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="      C. Status Mahasiswa Transfer "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_Asal_Prodi" />
+
+
+                <CheckBox
+                    android:id="@+id/AkreditasiDenganNilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Terakreditasi dengan nilai"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.108"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Status_MahaTrans" />
+                <EditText
+                    android:id="@+id/Isi_AkreditasiDenganNilai2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:inputType="number"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Akreditasi dengan nilai ?"
+                    app:layout_constraintTop_toBottomOf="@id/AkreditasiDenganNilai" />
+
+                <CheckBox
+                    android:id="@+id/BlmAkreditasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Belum Terakreditasi"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_AkreditasiDenganNilai2" />
+
+                <Button
+                    android:id="@+id/Next1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lihat Hasil 1"
+                    app:layout_constraintTop_toBottomOf="@id/BlmAkreditasi"></Button>
+                <Button
+                    android:id="@+id/Lanjut1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lanjut 1"
+                    app:layout_constraintTop_toBottomOf="@id/Next1"></Button>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="192dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="279dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="368dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="446dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

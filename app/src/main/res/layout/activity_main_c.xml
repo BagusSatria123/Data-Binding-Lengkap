@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="classC"
+            type="com.bagus.databinding.models.ClassC" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivityC">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+            
+            
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/DataSekolahMenengah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. Data Sekolah Menengah *"
+                    android:textSize="16sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/NamaSekolahMenengah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="180dp"
+                    android:text="1. Nama Sekolah Menengah "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/DataSekolahMenengah" />
+
+                <EditText
+                    android:id="@+id/Isi_NamaSekolahMenengah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:inputType="textPersonName"
+                    android:hint="Isi Nama Sekolah Menengah"
+                    app:layout_constraintTop_toBottomOf="@id/NamaSekolahMenengah" />
+
+                <TextView
+                    android:id="@+id/AlamatSekolah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="180dp"
+                    android:text="2. Alamat Sekolah Menengah "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_NamaSekolahMenengah" />
+
+                <EditText
+                    android:id="@+id/Isi_AlamatSekolah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Isi Alamat Sekolah"
+                    android:inputType="textPersonName"
+                    app:layout_constraintTop_toBottomOf="@id/AlamatSekolah" />
+
+                <TextView
+                    android:id="@+id/Kabupaten_kotaC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="240dp"
+                    android:text="   Kabupaten/Kota"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_AlamatSekolah" />
+
+                <EditText
+                    android:id="@+id/IsiKabupatenKotaC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Isi Kabupaten/Kota"
+                    app:layout_constraintTop_toBottomOf="@id/Kabupaten_kotaC" />
+
+                <TextView
+                    android:id="@+id/ProvinsiC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="296dp"
+                    android:text="   Provinsi"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/IsiKabupatenKotaC" />
+
+                <EditText
+                    android:id="@+id/Isi_ProvinsiC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:inputType="textPersonName"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Isi Provinsi"
+                    app:layout_constraintTop_toBottomOf="@id/ProvinsiC" />
+
+                <TextView
+                    android:id="@+id/DataNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="200dp"
+                    android:text="3. Data NEM/STK/SKHUN*"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_ProvinsiC" />
+
+                <TextView
+                    android:id="@+id/Tahun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="296dp"
+                    android:text="  a. Tahun"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/DataNew" />
+
+                <EditText
+                    android:id="@+id/Isi_TahunC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Isi Tahun"
+                    android:inputType="number"
+                    app:layout_constraintTop_toBottomOf="@id/Tahun" />
+
+                <TextView
+                    android:id="@+id/JumlahNilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="248dp"
+                    android:text="  b. Jumlah Nilai"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_TahunC" />
+
+                <EditText
+                    android:id="@+id/Isi_JumlahNilai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Isi Jumlah Nilai"
+                    android:inputType="number"
+                    app:layout_constraintTop_toBottomOf="@id/JumlahNilai" />
+
+                <TextView
+                    android:id="@+id/JumlahMataPelajaran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="172dp"
+                    android:text="  c. Jumlah Mata pelajaran"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_JumlahNilai" />
+
+                <EditText
+                    android:id="@+id/Isi_JumlahMataPelajaran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="Isi Jumlah Mata pelajaran"
+                    android:inputType="number"
+                    app:layout_constraintTop_toBottomOf="@id/JumlahMataPelajaran" />
+                <Button
+                    android:id="@+id/Next3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lihat Hasil"
+                    app:layout_constraintTop_toBottomOf="@id/Isi_JumlahMataPelajaran"></Button>
+                <Button
+                    android:id="@+id/Lanjut35"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lanjut"
+                    app:layout_constraintTop_toBottomOf="@id/Next3"></Button>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
